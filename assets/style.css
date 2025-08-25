@@ -1,0 +1,60 @@
+/* Apply a clean background and center content */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+div {
+    padding: 2px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Graph container */
+#sales_graph {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Radio buttons */
+#region-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+#region-options label {
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#region-options input[type="radio"] {
+    display: none; /* Hide default radio button */
+}
+
+#region-options label:hover {
+    background: #e6f0ff;
+}
+
+#region-options input[type="radio"]:checked + label {
+    background: #4a90e2;
+    color: white;
+    font-weight: bold;
+}
