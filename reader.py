@@ -7,7 +7,6 @@ df2 = pandas.read_csv('data/daily_sales_data_2.csv', parse_dates=['date'])
 df_list = [df0, df1, df2]
 outputs = {'Sales': [], 'Date': [], 'Region': []}
 num_outputs = 0
-output_idx = []
 
 for df in df_list:
     rows = len(df)
@@ -17,7 +16,6 @@ for df in df_list:
             outputs['Sales'].append(df.at[i, 'price'] * df.at[i, 'quantity'])
             outputs['Date'].append(df.at[i, 'date'])
             outputs['Region'].append(df.at[i, 'region'])
-            output_idx.append(num_outputs)
             num_outputs += 1
 
 output_df = pandas.DataFrame(data=outputs)
